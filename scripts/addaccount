@@ -2,6 +2,8 @@ useradd $1 && echo "$1:$2" | chpasswd
 mkdir /home/$1 && chown $1:$1 /home/$1
 mkdir /courses/$1
 chown $1:$1 /courses/$1
-echo "options(swirl_courses_dir = '/courses/$1', swirl_data_dir = '/courses/$1')" > /home/$1/.Rprofile
+mkdir /swirldata/$1
+chown $1:$1 /swirldata/$1
+echo "options(swirl_courses_dir = '/courses/$1', swirl_data_dir = '/swirldata/$1')" > /home/$1/.Rprofile
 chown $1:$1 /home/$1/.Rprofile
 addgroup $1 staff

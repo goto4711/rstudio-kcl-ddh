@@ -1,0 +1,7 @@
+#!/bin/bash
+while read l; do
+	read -a chunks <<< $l
+	if [ -n "${chunks[0]}" ]; then
+            docker exec -t $2 bash -c "./delaccount ${chunks[0]}"
+        fi
+done <$1

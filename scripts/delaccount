@@ -1,0 +1,4 @@
+userdel -rf $1
+rm -rf /courses/$1
+rm -rf /swirldata/$1
+

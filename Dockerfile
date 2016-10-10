@@ -27,5 +27,6 @@ RUN wget https://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.
 RUN R CMD INSTALL ngramr_1.4.5.tar.gz
 
 RUN mkdir /courses
+RUN mkdir /swirldata
 
 ADD scripts /
