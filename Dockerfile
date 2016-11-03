@@ -21,6 +21,11 @@ RUN install2.r --error \
     tm \
     topicmodels \
     twitteR \
+    igraph \
+    lubridate \
+    dplyr \
+    stringr \
+    rvest \
     wordcloud
 
 RUN wget https://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.gz
