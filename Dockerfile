@@ -1,6 +1,6 @@
 FROM rocker/hadleyverse
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y --fix-missing install libjpeg62-turbo-dev
+RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y --fix-missing install libjpeg62-dev
 
 RUN install2.r --error \
     NeuralNetTools \
