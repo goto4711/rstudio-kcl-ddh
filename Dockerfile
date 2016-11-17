@@ -1,5 +1,7 @@
 FROM rocker/hadleyverse
 
+RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y --fix-missing install libjpeg-dev
+
 RUN install2.r --error \
     NeuralNetTools \
     NeuralNetTools \
