@@ -68,4 +68,3 @@ RUN mkdir /swirldata
 
 ADD scripts /
 
-RUN bash -c "./addaccount student student"
