@@ -79,7 +79,7 @@ RUN Rscript -e 'require(devtools)' -e 'install_github("PMassicotte/gtrendsR")'
 RUN mkdir /courses
 RUN mkdir /swirldata
 
-RUN echo 'session-timeout-minutes=15' > /etc/rstudio/rsession.conf
+RUN echo 'session-timeout-minutes=10' > /etc/rstudio/rsession.conf
 
 ADD scripts /
 
