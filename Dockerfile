@@ -1,7 +1,19 @@
-FROM rocker/hadleyverse
-
+FROM rocker/tidyverse
+  
 RUN apt-get clean && apt-get -q -y update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y --fix-missing install libjpeg62-turbo-dev libudunits2-dev libprotobuf-dev  protobuf-compiler
+RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y --fix-missing install \
+    libbz2-dev \
+    libgdal-dev \
+    libgeos-dev \
+    libgsl-dev \
+    libjpeg62-turbo-dev \
+    libjq-dev \
+    liblzma-dev \ 
+    libprotobuf-dev \
+    libudunits2-dev \
+    libv8-3.14-dev \
+    openjdk-8-jdk \
+    protobuf-compiler
 
 RUN install2.r --error \
     GISTools \
@@ -25,7 +37,6 @@ RUN install2.r --error \
     ggvis \
     googleVis \
     gsheet \
-    gtrendsR \
     httr \
     imputeTS \
     igraph \
@@ -62,9 +73,13 @@ RUN Rscript -e "require(devtools)" -e "install_github('likert', 'jbryer')"
 RUN Rscript -e 'require(devtools)' -e 'install_github("robjhyndman/forecast")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("ironholds/pageviews")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("twitter/AnomalyDetection")'
+RUN Rscript -e 'require(devtools)' -e 'install_github("dgrtwo/gganimate")'
+RUN Rscript -e 'require(devtools)' -e 'install_github("PMassicotte/gtrendsR")'
 
 RUN mkdir /courses
 RUN mkdir /swirldata
+
+RUN echo 'session-timeout-minutes=15' > /etc/rstudio/rsession.conf
 
 ADD scripts /
 
