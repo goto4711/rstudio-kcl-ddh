@@ -34,9 +34,13 @@ RUN install2.r --error \
     gapminder \
     ggmap \
     ggplot2 \
+    ggrepel \
     ggvis \
     googleVis \
+    graphTweets \
     gsheet \
+    gtrendsR \
+    gutenbergr \
     httr \
     imputeTS \
     igraph \
@@ -47,6 +51,8 @@ RUN install2.r --error \
     maps \
     nnet \
     pageviews \
+    plotly \
+    quanteda \
     raster \
     recommenderlab \
     reshape2 \
@@ -60,8 +66,10 @@ RUN install2.r --error \
     tmap \
     topicmodels \
     twitteR \
+    wikipediatrend \
     wordcloud \
     xts
+    
     
 RUN wget https://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.gz
 RUN R CMD INSTALL ngramr_1.4.5.tar.gz
@@ -70,12 +78,19 @@ RUN R CMD INSTALL ngramr_1.4.5.tar.gz
 #RUN R CMD INSTALL slam_0.1-37.tar.gz
 
 RUN Rscript -e 'install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))'
-RUN Rscript -e "require(devtools)" -e "install_github('likert', 'jbryer')"
+RUN Rscript -e "require(devtools)" -e 'install_github("jbryer/likert")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("robjhyndman/forecast")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("ironholds/pageviews")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("twitter/AnomalyDetection")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("dgrtwo/gganimate")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("PMassicotte/gtrendsR")'
+RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapDictionaries")'
+RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapRegex")'
+RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapTools")'
+RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdap")'
+
+RUN Rscript -e 'require(devtools)' -e 'install_github("goto4711/scaddh")'
+
 
 # Uncomment for online build
 
