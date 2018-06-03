@@ -88,6 +88,7 @@ RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapDictionaries"
 RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapRegex")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapTools")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdap")'
+RUN Rscript -e 'source("https://bioconductor.org/biocLite.R")' -e 'biocLite("Rgraphviz")'
 
 RUN Rscript -e 'require(devtools)' -e 'install_github("goto4711/scaddh")'
 
