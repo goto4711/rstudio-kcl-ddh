@@ -77,6 +77,8 @@ RUN Rscript -e 'require(devtools)' -e 'install_github("twitter/AnomalyDetection"
 RUN Rscript -e 'require(devtools)' -e 'install_github("dgrtwo/gganimate")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("PMassicotte/gtrendsR")'
 
+# Uncomment for online build
+
 RUN mkdir /courses
 RUN mkdir /swirldata
 
