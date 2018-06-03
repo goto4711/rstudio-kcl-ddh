@@ -51,6 +51,7 @@ RUN install2.r --error \
     recommenderlab \
     reshape2 \
     rpart \
+    rtweet \
     rworldmap \
     shiny \
     spatstat \
