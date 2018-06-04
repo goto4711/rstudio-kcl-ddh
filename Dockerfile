@@ -34,6 +34,7 @@ RUN install2.r --error \
     gapminder \
     ggmap \
     ggplot2 \
+    ggraph \
     ggrepel \
     ggvis \
     googleVis \
