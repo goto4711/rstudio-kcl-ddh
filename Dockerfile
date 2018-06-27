@@ -63,6 +63,7 @@ RUN install2.r --error \
     shiny \
     spatstat \
     swirl \
+    tidytext \
     tm \
     tmap \
     topicmodels \
