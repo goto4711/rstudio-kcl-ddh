@@ -25,6 +25,7 @@ RUN install2.r --error \
     Rfacebook \
     XML \
     arules \
+    caret \
     catdata \
     cluster \
     corrplot \
@@ -50,6 +51,8 @@ RUN install2.r --error \
     lubridate \
     magrittr \
     maps \
+    MASS \
+    mlogit \
     nnet \
     pageviews \
     plotly \
@@ -62,6 +65,7 @@ RUN install2.r --error \
     rworldmap \
     shiny \
     spatstat \
+    survival \
     swirl \
     tidytext \
     tm \
@@ -72,7 +76,7 @@ RUN install2.r --error \
     wordcloud \
     xts
     
-    
+   
 RUN wget https://cran.r-project.org/src/contrib/Archive/ngramr/ngramr_1.4.5.tar.gz
 RUN R CMD INSTALL ngramr_1.4.5.tar.gz
 
