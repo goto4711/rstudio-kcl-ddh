@@ -32,6 +32,7 @@ RUN install2.r --error \
     devtools \
     dplyr \
     fitdistrplus \
+    forecast \
     gapminder \
     ggmap \
     ggplot2 \
@@ -54,6 +55,7 @@ RUN install2.r --error \
     MASS \
     mlogit \
     nnet \
+    qdap \
     pageviews \
     plotly \
     quanteda \
@@ -85,7 +87,7 @@ RUN R CMD INSTALL ngramr_1.4.5.tar.gz
 
 RUN Rscript -e 'install.packages("h2o", type="source", repos=(c("http://h2o-release.s3.amazonaws.com/h2o/latest_stable_R")))'
 RUN Rscript -e "require(devtools)" -e 'install_github("jbryer/likert")'
-RUN Rscript -e 'require(devtools)' -e 'install_github("robjhyndman/forecast")'
+#RUN Rscript -e 'require(devtools)' -e 'install_github("robjhyndman/forecast")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("ironholds/pageviews")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("twitter/AnomalyDetection")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("dgrtwo/gganimate")'
@@ -93,7 +95,7 @@ RUN Rscript -e 'require(devtools)' -e 'install_github("PMassicotte/gtrendsR")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapDictionaries")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapRegex")'
 RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdapTools")'
-RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdap")'
+#RUN Rscript -e 'require(devtools)' -e 'install_github("trinker/qdap")'
 RUN Rscript -e 'source("https://bioconductor.org/biocLite.R")' -e 'biocLite("Rgraphviz")'
 
 RUN Rscript -e 'require(devtools)' -e 'install_github("goto4711/scaddh")'
